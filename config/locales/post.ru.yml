@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    models:
+      post:
+        one: Статья
+        other: Статьи
+        many: Статьи
+        few: Статей
+    attributes:
+      post:
+        title: Заголовок
+        body: Содержимое статьи
+        meta_title: SEO Заголовок
+        meta_description: SEO Описание
+        meta_keywords: SEO Ключевые слова
+        image: Главная картинка

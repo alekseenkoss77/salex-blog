@@ -1,0 +1,17 @@
+<%- @posts.each do |post| %>
+  <article class="index-post">
+    <h2 class="headline"><a href="<%= show_post_path(post) %>"><%= post.title %></a></h2>  
+    <div class='author'><%= fa_icon 'user', text: 'John Smit', left: true %> <span> / </span> <%= fa_icon 'calendar' %> on August 12, 2012.</div>
+    <div class="text">
+      <%= RedCloth.new(post.body).to_html %>
+    </div>
+    <div class="read-more"></div>
+    <div class="social">
+      <div class="title"><%= t('post.share') %></div>
+      <hr/>
+      <div class="links"><%= render 'shared/social' %></div>
+    </div>
+  </article>
+<% end %>
+
+<%= render 'sidebar/about' %>

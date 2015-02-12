@@ -1,0 +1,12 @@
+<%= content_for :sidebar do %>
+  <div class="sidebar-widget">
+    <div class="title"><%= t('sidebar.about_me') %></div>
+    <div class="avatar">
+      <%= image_tag 'avatar1.jpg', width: 130, height: 87 %>
+    </div>
+
+    <div class="about-text">
+      <%= raw t('sidebar.about_text') %>
+    </div>
+  </div>
+<% end %>

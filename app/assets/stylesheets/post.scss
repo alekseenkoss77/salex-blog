@@ -1,0 +1,97 @@
+.headline {
+  text-align: center;
+  font-size: 30px;
+  color: #424242;
+
+  a {
+    font-size: 30px;
+    color: #424242;
+  }
+  a:hover {
+    color: gray;
+  }
+}
+
+.author {
+  color: grey;
+  font-size: 13px;
+  text-align: center;
+  margin: 10px 0px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding: 10px 0px;
+}
+
+.comments {
+  background: white;
+  padding: 10px;
+}
+
+.show-post {
+  background: white;
+  padding: 10px;
+
+  .labels {
+    margin-left: 20px;
+  }
+
+  .text {
+    padding: 0px 20px;
+  }
+
+  .social {
+    text-align: center;
+    color: gray;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+
+    hr {margin-top: 2px;}
+    
+    .title {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+}
+
+.index-post {
+  background: white;
+  padding: 10px;
+
+  .text {
+    padding: 0px 20px;
+  }
+
+  .read-more {
+    text-align: center;
+    margin: 20px 0px;
+
+    a {
+      padding: 5px 50px;
+      border: 3px solid wheat;
+      color: black;
+      font-size: 14px;
+      font-family: Verdana, sans-serif;
+    }
+
+    a:hover {
+      border-color: black;
+      background: black;
+      color: wheat
+    }
+  }
+
+  .social {
+    text-align: center;
+    color: gray;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+
+    hr {margin-top: 2px;}
+    
+    .title {
+      position: relative;
+      margin-top: 20px;
+    }
+  }
+}

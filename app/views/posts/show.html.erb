@@ -1,0 +1,30 @@
+<%= content_for(:title) {@post.meta_title} %>
+
+<article class="show-post">
+  <h1 class="headline"><%= @post.title %></h1>    
+  <div class='author'><%= fa_icon 'user', text: 'John Smit', left: true %> <span> / </span> <%= fa_icon 'calendar' %> on August 12, 2012.</div>
+  <div class="text">
+    <%= RedCloth.new(@post.body).to_html.html_safe %>
+  </div>
+  <hr/>
+  <div class="labels">
+    <%= render 'widgets/tag_cloud', {tags: @post.tags} %>
+  </div>
+  <div class="clear"></div>
+
+  <div class="social">
+    <div class="title"><%= t('post.share') %></div>
+    <hr/>
+    <div class="links"><%= render 'shared/social' %></div>
+  </div>
+</article>
+
+<hr/>
+
+<div class="comments">
+<%= render 'shared/disqus' %>
+</div>
+
+<%= render 'sidebar/about' %>
+<%= render 'sidebar/social' %>
+<%= render 'sidebar/labels' %>

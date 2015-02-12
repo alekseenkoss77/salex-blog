@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      post:
+        one: Post
+        other: Posts
+        many: Posts
+        few: Posts
+    attributes:
+      post:
+        title: Headline
+        body: Page content
+        meta_title: SEO Title
+        meta_description: SEO Description
+        meta_keywords: SEO Keywords
+        image: Main picture

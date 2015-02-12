@@ -1,0 +1,21 @@
+<%- @posts.each do |post| %>
+  <article class="index-post">
+    <h2 class="headline"><a href="<%= post_path(post.slug) %>"><%= post.title %></a></h2>  
+    <div class='author'><%= fa_icon 'user', text: 'Sergey Alekseenko', left: true %> <span> / </span> <%= fa_icon 'calendar' %> <%= Russian::strftime(post.created_at, "%d %B %Y") %></div>
+    <div class="text">
+      <%= RedCloth.new(post.body.truncate(250)).to_html.html_safe %>
+    </div>
+    <div class="read-more"><%= link_to t('post.read_more'), post_path(post.slug) %></div>
+    <div class="social">
+      <div class="title"><%= t('post.share') %></div>
+      <hr/>
+      <div class="links"><%= render 'shared/social' %></div>
+    </div>
+  </article>
+  <hr/>
+<% end %>
+
+<%= render 'widgets/pagination', {collection: @posts} %>
+<%= render 'sidebar/about' %>
+<%= render 'sidebar/social' %>
+<%= render 'sidebar/labels' %>

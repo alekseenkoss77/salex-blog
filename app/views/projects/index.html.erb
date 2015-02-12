@@ -1,0 +1,18 @@
+
+<%- @projects.each do |project| -%>
+  <div class="medium-6 columns project-item">
+    <% if project.image.exists? %>
+      <%= image_tag project.image.url(:medium), width: 323, height: 298 %>
+    <% end %>
+    <div class="description">
+      <span class="tags"><%= project.tag_list %></span>
+      <h3><%= project.title %></h3>
+      <div class="read-more"><%= link_to t('project.more'), project_path(project.slug) %></div>
+    </div>
+  </div>
+<%- end -%>
+<hr/>
+
+<%= render 'sidebar/about' %>
+<%= render 'sidebar/social' %>
+<%= render 'sidebar/labels' %>

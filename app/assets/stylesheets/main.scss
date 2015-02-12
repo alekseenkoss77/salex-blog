@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Special+Elite|Candal);
+
+body {
+  background: url(bg1.png);
+}
+
+.header {background: white;}
+
+.page {
+  margin-top: 30px;
+  .main-content {
+    padding: 0px;
+  }
+
+  .sidebar {
+    //background: white;
+  }
+}
+
+.clear { clear: both; }
+
+hr {
+  border: solid #ebebeb;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
+}
+
+.header {
+
+  .logo-title {
+    font-family: 'Candal', sans-serif;
+    font-size: 40px;
+    width: 500px;
+    height: 120px;
+    margin-left: 300px;
+    position: relative;
+  
+    .description {
+      position: absolute;
+      font-size: 20px;
+      font-family: 'Special Elite', cursive;
+      margin: 50px 85px;
+    }
+
+    .s-word {
+      padding: 20px 20px 20px 20px;
+      width: 65px;
+      float: left;
+      background: black;
+      color: wheat;
+    }
+
+    .txt {
+      width: 300px;
+      float: left;
+    }
+  }
+
+  .navigation-wrapper {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+
+    .button-group {
+      display: table;
+      margin: 0 auto;
+
+      li:first-child {
+        .link:before {
+          content: "";
+        }
+      }
+
+      li {
+
+        .link:before{
+          color: #ebebeb;
+          content: "/";
+          margin-right: 22px;
+          font-size: 18px;
+          line-height: 1;
+        }
+
+        .link {
+          color: #424242;
+          text-transform: uppercase;
+          padding: 23px 0px 23px 22px;
+          margin: 0px;
+          font-family: Times New Roman, sans-serif;
+        }
+
+        .link:hover {
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: white;
+  padding-top: 10px;
+  p {
+    font-size: 13px;
+
+  }
+}
+
+.pagination {
+  background: white;
+  height: 46px;
+
+  .disabled {
+    display: none;
+  }
+
+  .current {
+    padding: 10px 20px;
+    display: block;
+    float: left;
+    font-style: normal;
+    border-bottom: 2px solid wheat;
+    color: black;
+  }
+
+  .previous_page {
+    padding: 10px 20px;
+  }
+
+  a {
+    padding: 10px 20px;
+    color: black;
+    float: left;
+  }
+
+  a:hover {
+    border-bottom: 2px solid wheat;
+  }
+}

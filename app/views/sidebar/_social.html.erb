@@ -1,0 +1,11 @@
+<%= content_for :sidebar do %>
+  <hr/>
+  <div class="sidebar-widget">
+    <div class="title"><%= t('sidebar.social') %></div>
+
+    <div class="icons">
+      <div class="addthis_horizontal_follow_toolbox"></div>
+    </div>
+  </div>
+  <%= render "shared/follow_code" %>
+<% end %>

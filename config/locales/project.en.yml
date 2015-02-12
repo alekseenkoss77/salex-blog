@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    models:
+      project:
+        one: Project
+        other: Project
+        many: Project
+        few: Project
+    attributes:
+      project:
+        title: Headline
+        body: Page content
+        owner: Owner
+        status: Status of project
+        role: Role in project
+        meta_title: SEO Title
+        meta_description: SEO Description
+        meta_keywords: SEO Keywords
+        image: Main picture
+        tag_list: Tags
+        locale: Lang

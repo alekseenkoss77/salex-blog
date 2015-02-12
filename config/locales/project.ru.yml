@@ -1,0 +1,21 @@
+ru:
+  activerecord:
+    models:
+      project:
+        one: Проект
+        other: Проекты
+        many: Проекты
+        few: Проектов
+    attributes:
+      project:
+        title: Заголовок
+        body: Содержание
+        owner: Владелец
+        status: Статус
+        role: Роль в проекте
+        meta_title: SEO заголовок
+        meta_description: SEO описание
+        meta_keywords: SEO ключи
+        image: Картинка
+        tag_list: Тэги
+        locale: Язык

@@ -1,0 +1,33 @@
+en:
+  i18n:
+    plural:
+      rule: "lambda { |n| n == 1 ? :one : :other }"
+  hello: "Hello world"
+  menu:
+    home: Home
+    about: About me
+    portfolio: Portfolio
+    contacts: Contacts
+  sidebar:
+    about_me: About me
+    about_text: "<strong>My name is Sergey Alekseenko.</strong><br/> I'm a web-developer and software engineer. I like work with Ruby on Rails, Sinatra..."
+    social: Social
+    labels: Labels
+  post:
+    share: Share article
+    read_more: Read more
+  will_paginate:
+    previous_label: "<<"
+    next_label: ">>"
+    page_gap: "&hellip;"
+  project:
+    more: Know more
+    status:
+      started: Started
+      coplete: Completed
+      progress: In progress
+    role:
+      developer: Development
+      seo: SEO
+      admin: Administration
+      support: Support

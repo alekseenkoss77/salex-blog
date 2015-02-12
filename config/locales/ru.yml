@@ -1,0 +1,32 @@
+ru:
+  i18n:
+    plural:
+      rule: "lambda { |n| n == 1 ? :one : :other }"
+  menu:
+    home: Главная
+    about: Обо мне
+    portfolio: Портфолио
+    contacts: Контакты
+  sidebar:
+    about_me: Обо мне
+    about_text: "<strong>Меня зовут Алексеенко Сергей.</strong></br> Я занимаюсь веб-разработкой и люблю работать с Ruby on Rails, Sinatra..."
+    social: Социальные сети
+    labels: Метки
+  post:
+    share: Поделись статьей
+    read_more: Читать дальше
+  will_paginate:
+    previous_label: "<<"
+    next_label: ">>"
+    page_gap: "&hellip;"
+  project:
+    more: Подробнее
+    status:
+      started: Начался
+      coplete: Завершен
+      progress: В работе
+    role:
+      developer: Разработка
+      seo: SEO оптимизация
+      admin: Администрирование
+      support: Тех. поддержка

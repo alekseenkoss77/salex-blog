@@ -1,0 +1,10 @@
+/*
+ *= require_self
+ *= require foundation_and_overrides
+ *= require main
+ *= require home
+ *= require post
+ *= require project
+ *= require sidebar
+ */
+@import 'font-awesome';
