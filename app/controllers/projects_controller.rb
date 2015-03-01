@@ -1,10 +1,10 @@
 class ProjectsController < ApplicationController
   
-  before_action :set_post, only: [:show]
+  before_action :set_project, only: [:show]
   before_action :set_tags_cloud
 
   def index
-    @posts = load_from_params
+    load_from_params
   end
 
   def show
@@ -25,6 +25,7 @@ private
     if params[:tag_id].present?
       @projects = @projects.tagged_with(ActsAsTaggableOn::Tag.find(params[:tag_id]))
     end
-    @projects.paginate(page: params[:page], per_page: 15)
+    @projects = @projects.paginate(page: params[:page], per_page: 6)
+    @projects
   end
 end

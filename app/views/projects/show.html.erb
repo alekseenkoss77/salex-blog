@@ -1,3 +1,62 @@
+<div class="medium-12 columns project-title">
+  <h1 class="title small"><%= @project.title %></h1>
+  <%= render_breadcrumbs([
+      {url: '/', name: t('menu.home')},
+      {url: projects_path,name: t('project.index')},
+      {name: @project.title}
+    ]) %>
+</div>
+
+<hr/>
+
+<div class="medium-12 columns project-body">
+  <div class="row">
+    <div class="medium-5 columns project-image">
+      <a href="#" data-reveal-id="projectImage" >
+        <%= image_tag @project.image.url(:medium), width: 223, height: 198 %>
+      </a>
+    </div>
+    <div class="medium-7 columns project-description">
+      <div class="descr">
+        <%= RedCloth.new(@project.body).to_html.html_safe %>
+      </div>
+      <div class="panel additional">
+        <div class="row">
+          <div class="medium-3 columns left-names"><%= t('project.url') %>: </div>
+          <div class="medium-9 columns"><%= link_to @project.url, "http://#{@project.url}", { target: "_blank", rel: "nofollow" } %></div>
+        </div>
+        <div class="row">
+          <div class="medium-3 columns left-names"><%= t('project.owner') %>: </div>
+          <div class="medium-9 columns"><%= @project.owner %></div>
+        </div>
+        <div class="row">
+          <div class="medium-3 columns left-names"><%= t('project.status_title') %>: </div>
+          <div class="medium-9 columns"><span class="success label"><%= t("project.status.#{@project.status}") %></span></div>
+        </div>
+        <div class="row">
+          <div class="medium-3 columns left-names"><%= t('project.role_title') %>: </div>
+          <div class="medium-9 columns"><span class="label"><%= t("project.role.#{@project.role}") %></span></div>
+        </div>
+        <div class="row">
+          <div class="medium-3 columns left-names"><%= t('project.skills') %>: </div>
+          <div class="medium-9 columns">
+            <% tag_cloud(@project.tags, 'project-labels') do |tag, style| %>
+               <span class="secondary label"><%= tag.name %></span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="projectImage" class="reveal-modal tiny" data-reveal>
+  <h4><%= @project.title %></h4>
+  <%= image_tag @project.image.url(:vertical) %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<hr/>
+
 <%= render 'sidebar/about' %>
 <%= render 'sidebar/social' %>
-<%= render 'sidebar/labels' %>

@@ -6,5 +6,5 @@
  *= require post
  *= require project
  *= require sidebar
+ *= require font-awesome
  */
-@import 'font-awesome';

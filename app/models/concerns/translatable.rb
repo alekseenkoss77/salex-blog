@@ -10,7 +10,7 @@ module Translatable
   protected
 
   def build_permalink
-    self.slug ||= slug_from_string(self.title)
+    self.slug = slug_from_string(self.title)
   end
 
   def slug_from_string(title)

@@ -1,5 +1,5 @@
 <% tag_cloud(tags, 'label-cloud') do |tag, style| %>
-  <a href="<%= tagged_post_path(tag_id: tag.id) %>">
+  <a href="<%= send("tagged_#{resource}_path", tag_id: tag.id) %>">
     <span class="name"><%= tag.name %></span>
     <span class="count"><%= tag.taggings_count %></span>
   </a>

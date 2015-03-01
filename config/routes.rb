@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   
   scope "/:locale" do
     get "/posts/:tag_id/tags" => "posts#index", as: :tagged_post
+    get "/projects/:tag_id/tags" => "projects#index", as: :tagged_project
+    
     resources :posts, only: [:index, :show]
     resources :projects, only: [:index, :show]
   end

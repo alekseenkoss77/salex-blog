@@ -7,6 +7,7 @@ ru:
     about: Обо мне
     portfolio: Портфолио
     contacts: Контакты
+    menu: Меню
   sidebar:
     about_me: Обо мне
     about_text: "<strong>Меня зовут Алексеенко Сергей.</strong></br> Я занимаюсь веб-разработкой и люблю работать с Ruby on Rails, Sinatra..."
@@ -20,10 +21,16 @@ ru:
     next_label: ">>"
     page_gap: "&hellip;"
   project:
+    index: Проекты
+    url: ссылка
+    skills: навыки
+    owner: владелец
+    role_title: роль
+    status_title: статус
     more: Подробнее
     status:
       started: Начался
-      coplete: Завершен
+      complete: Завершен
       progress: В работе
     role:
       developer: Разработка

@@ -4,7 +4,7 @@
     <div class="title"><%= t('sidebar.labels') %></div>
 
     <div class="labels">
-      <%= render 'widgets/tag_cloud', {tags: @tags} %>
+      <%= render 'widgets/tag_cloud', {tags: @tags, resource: resource} %>
       <div class="clear"></div>
     </div>
   </div>
