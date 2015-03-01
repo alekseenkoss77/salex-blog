@@ -8,6 +8,7 @@ en:
     about: About me
     portfolio: Portfolio
     contacts: Contacts
+    menu: Menu
   sidebar:
     about_me: About me
     about_text: "<strong>My name is Sergey Alekseenko.</strong><br/> I'm a web-developer and software engineer. I like work with Ruby on Rails, Sinatra..."
@@ -21,10 +22,16 @@ en:
     next_label: ">>"
     page_gap: "&hellip;"
   project:
+    index: Projects
+    url: link
+    skills: skills
+    role_title: role
+    status_title: status
     more: Know more
+    owner: owner
     status:
       started: Started
-      coplete: Completed
+      complete: Completed
       progress: In progress
     role:
       developer: Development

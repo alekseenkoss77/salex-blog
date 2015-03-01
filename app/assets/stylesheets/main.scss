@@ -32,9 +32,6 @@ hr {
   .logo-title {
     font-family: 'Candal', sans-serif;
     font-size: 40px;
-    width: 500px;
-    height: 120px;
-    margin-left: 300px;
     position: relative;
   
     .description {
@@ -53,20 +50,31 @@ hr {
     }
 
     .txt {
-      width: 300px;
       float: left;
     }
   }
 
-  .navigation-wrapper {
-    width: 100%;
-    height: 40px;
-    text-align: center;
+  .top-bar {
+    text-align:center;
+    background: #fff;
 
-    .button-group {
-      display: table;
-      margin: 0 auto;
+    .toggle-topbar.menu-icon {
+      margin-top: 5px;
 
+      span { 
+        color: #000;
+      }
+
+      span:after {
+        color: #000;
+      }
+    }
+  }
+
+  .top-bar-section {
+    display: inline-block;
+
+    .left {
       li:first-child {
         .link:before {
           content: "";
@@ -84,14 +92,15 @@ hr {
         }
 
         .link {
+          background: #fff;
           color: #424242;
           text-transform: uppercase;
-          padding: 23px 0px 23px 22px;
           margin: 0px;
           font-family: Times New Roman, sans-serif;
         }
 
         .link:hover {
+          background: #fff;
           color: gray;
         }
       }
@@ -137,5 +146,25 @@ footer {
 
   a:hover {
     border-bottom: 2px solid wheat;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .header {
+    .top-bar {
+      .top-bar-section {
+        li {
+          .link:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .logo-title {
+      .description {
+        font-size: 14px;
+      }
+    }
   }
 }

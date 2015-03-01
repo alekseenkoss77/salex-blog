@@ -1,3 +1,12 @@
+<div class="medium-12 columns projects-title">
+  <h1 class="title small"><%= t('project.index') %></h1>
+  <%= render_breadcrumbs([
+      {url: '/', name: t('menu.home')},
+      {name: t('project.index')}
+    ]) %>
+</div>
+
+<hr/>
 
 <%- @projects.each do |project| -%>
   <div class="medium-6 columns project-item">
@@ -5,14 +14,14 @@
       <%= image_tag project.image.url(:medium), width: 323, height: 298 %>
     <% end %>
     <div class="description">
-      <span class="tags"><%= project.tag_list %></span>
+      <span class="tags"><%= project.tag_list[0..1] %></span>
       <h3><%= project.title %></h3>
       <div class="read-more"><%= link_to t('project.more'), project_path(project.slug) %></div>
     </div>
   </div>
 <%- end -%>
 <hr/>
-
+<%= render 'widgets/pagination', {collection: @projects} %>
 <%= render 'sidebar/about' %>
 <%= render 'sidebar/social' %>
-<%= render 'sidebar/labels' %>
+<%= render 'sidebar/labels', {resource: 'project'} %>

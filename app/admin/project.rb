@@ -27,6 +27,7 @@ ActiveAdmin.register Project do
       f.input :title
       f.input :locale, as: :select, collection: ['ru', 'en'], default: 'ru'
       f.input :owner
+      f.input :url, as: :string
       f.input :status, as: :select, collection: Project.statuses.keys.to_a
       f.input :role, as: :select, collection: Project.roles.keys.to_a
       f.input :tag_list
