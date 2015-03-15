@@ -4,7 +4,7 @@
   <h1 class="headline"><%= @post.title %></h1>    
   <div class='author'><%= fa_icon 'user', text: 'John Smit', left: true %> <span> / </span> <%= fa_icon 'calendar' %> on August 12, 2012.</div>
   <div class="text">
-    <%= RedCloth.new(@post.body).to_html.html_safe %>
+    <%= coderay(RedCloth.new(@post.body).to_html.html_safe) %>
   </div>
   <hr/>
   <div class="labels">
