@@ -272,6 +272,7 @@ DEPENDENCIES
   capistrano-bundler
   capistrano-rails
   capistrano-rvm
+  coderay
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails
